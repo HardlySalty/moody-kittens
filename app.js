@@ -141,7 +141,9 @@ function loadKittens() {
   if(storedKittens != null){
     kittens = storedKittens
   }
-  day = daysPassed
+  if(daysPassed != null){
+    day = daysPassed
+  }
   drawKittens()
   drawDay()
 }
