@@ -301,7 +301,7 @@ function drawKittens() {
             <td width="12vw">${kitten.moodStr}</td>
           </tr
           <tr>
-          <td width="50vw" colspan="4" style="padding-left: 3.4vw; font-size: .4vw"><button onclick="feedCat(${kitten.id})">Feed</button><i> </i><button onclick="petCat(${kitten.id})" style="width: 3vw">Pet</button></td>
+          <td width="50vw" colspan="4" style="padding-left: 3.4vw;"><button style="font-size: .9vw;" onclick="feedCat(${kitten.id})">Feed</button><i> </i><button style="font-size: .9vw;" onclick="petCat(${kitten.id})" style="width: 3vw">Pet</button></td>
           </tr>
         </span>
       </table>
