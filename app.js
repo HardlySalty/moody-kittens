@@ -175,8 +175,6 @@ function resetPets(){
 function feedCat(catID){
   index = kittens.findIndex(x => x.id === catID)
   kittens[index].currentCalories += caloriesAmt
-  console.log(kittens[index].currentCalories)
-  console.log(kittens[index].mood)
 }
 
 function checkCalories(){
@@ -346,7 +344,6 @@ function drawKittens() {
 function getStarted() {
   document.getElementById("welcome").remove()
   document.getElementById("gameContainer").removeAttribute("hidden")
-  console.log('Good Luck, Take it away')
 }
 
 loadKittens();
