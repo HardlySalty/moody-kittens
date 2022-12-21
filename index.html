@@ -7,24 +7,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moody Kittens | CodeWorks</title>
   <link rel="shortcut icon" href="moody-logo.png" type="image/x-icon">
+  <!-- #region fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c2ad7cda48.js" crossorigin="anonymous"></script>
+  <!-- #endregion -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <header class="bg-dark d-flex align-items-center p-1 space-between">
+<body class="unselectable">
+  <header class="bg-dark d-flex align-items-center p-1">
     <img src="moody-logo.png" height="60" alt="Moody Kittens">
-    <form class="" onsubmit="addKitten(event)">
-      <div class="d-flex">
-        <input placeholder="Name" type="text" name="name" />
+
+    <div style="position: relative;">
+      <button id="dayBtn" onclick="nextDay()" class="button " style="width: 5vw; display: inline-block; text-align: center; margin-left: 25%;">Next Day</button>
+    </div>
+
+    <div id="headerBtns" style="color: white; padding-right: 2%; padding-left: 2%; width: 10%;">
+      <p id="dayCount"></p>
+    </div>
+
+    <div id="headerBtns" style="position: relative; margin-left: 27%; margin-right:29%;">
+      <button onclick="feedLess()"><i class="fa-solid fa-square-caret-down" style="color: rgb(37, 37, 37); padding: 1%;"></i></Button>
+      <p id="feedCups" style="color: white; padding-right: 2%; padding-left: 2%;">1/4 Cup</p>
+      <button onclick="feedMore()"><i class="fa-solid fa-square-caret-up" style="color: rgb(37, 37, 37);"></i></Button>
+    </div>
+    
+    
+
+    <form onsubmit="addKitten(event)" id="addKittenForm"  style="position: relative;">
+      <div class="d-flex" style="position: relative;">
+        <input placeholder="Name" type="text" id="name" required>
         <button class="btn-special" type="submit">
           /ᐠ｡ꞈ｡ᐟ\
         </button>
       </div>
     </form>
+
   </header>
+
+  <table class="center" style="margin-top: 1em; font-family: 'Oswald', sans-serif; width: min-content">
+    <tr>
+      <th rowspan="2"></th>
+    </tr>      
+  </table>
+
+  <div></div>
+
+
   <main class="container">
-    <div id="welcome" class="d-flex justify-content-center">
+    <!-- <div id="welcome" class="d-flex justify-content-center">
       <div class="card p-2 text-center w-50">
         <img src="moody-logo.png" height="250" alt="Moody Kittens">
         <div class="mt-2">
@@ -35,16 +70,14 @@
           <button onclick="getStarted()">Get Started</button>
         </div>
       </div>
+    </div> -->
+    <!-- TODO ADD HIDDEN -->
+    <div >
+      <span id="gameContainer"></span>
     </div>
-    <div class="p-2">
-      <div id="kittens" class="d-flex align-items-center flex-wrap">
-      </div>
   </main>
-  <footer class="card bg-dark text-light p-2 d-flex align-items-center justify-content-center">
-    <small>Created with <span style="color: var(--primary)">&hearts;</span> by CodeWorks</small>
-  </footer>
 
   <script src="app.js"></script>
 </body>
-
 </html>
+

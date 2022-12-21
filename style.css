@@ -1,9 +1,12 @@
+
+
 *{
-  box-sizing: border-box;
-}
+  box-sizing: border-box;}
+
+
 :root{
   --primary: #abce5c;
-  --primary-lighten: #b7f12e;
+  --primary-lighten: #00ff22;
   --primary-darken: #6f8639;
   --bg: #e0d9d9;
   --shadow: 2px 0 5px rgba(49, 49, 49, 0.5);
@@ -22,11 +25,11 @@ body{
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 header{
-  height: 80px;
+  height: 4em;
 }
 main{
   min-height: calc(100vh - (120px + 80px));
@@ -35,15 +38,7 @@ main{
   min-height: calc(95vh - (120px + 80px));
 }
 footer{
-  height: 120px;
-}
-
-p{
-  margin: .5em 0;
-}
-
-img{
-  max-width: 100%;
+  height: 10em;
 }
 
 form{
@@ -72,14 +67,15 @@ input:focus{
 
 button{
   background-color: var(--primary);
-  color: var(--light);
+  color: #5C634B;
+  font-weight:bold;
   border: none;
   border-radius: var(--corners);
   box-shadow: var(--shadow);
   text-transform: uppercase;
   transition: all .2s ease;
   cursor: pointer;
-  padding: .5em;
+  padding: 1em;
 }
 button:focus{
   outline: none;
@@ -92,7 +88,7 @@ button.btn-special{
   background: transparent;
   word-wrap: normal;
   border: none;
-  width: 100px;
+  width: 7em;
   box-shadow: none;
   position: relative;
   display: flex;
@@ -102,7 +98,7 @@ button.btn-special{
 }
 button.btn-special:after{
   content: "ADD";
-  margin-top: 5px;
+  margin-top: 0.3em;
   font-size: 8pt;
   color: var(--primary);
 }
@@ -111,6 +107,9 @@ button.btn-special:focus{
 }
 button.btn-special:hover{
   color: var(--primary);
+}
+button:active{
+  background-color: var(--primary-darken);
 }
 .container{
   margin: 0 .5em;
@@ -127,10 +126,19 @@ button.btn-special:hover{
   filter: drop-shadow(var(--shadow));
 }
 
+.kitten{
+  display: flex;
+  float: left;
+  font-family: 'Oswald', sans-serif;
+}
 
 .kitten img{
   filter: drop-shadow(2px 4px 6px #1b1b1b);
   transition: all .35s ease;
+  width: 11vw;
+  height: 8vw;
+  position: relative;
+  padding: 15x;
 }
 .kitten.happy img{
   filter: drop-shadow(2px 4px 6px #00ffb3);
@@ -274,4 +282,54 @@ button.btn-special:hover{
 
 .hidden{
   display: none !important;
+}
+
+.table{
+  padding: 50px;
+}
+
+.radioBtn{
+  padding: 1px;
+  margin-top: 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: solid;
+  border-top: solid;
+  height: 15px;
+  width: 60px;
+}
+
+.unselectable {
+  user-select: none;
+}
+.selectable {
+  user-select: all;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#headerBtns{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 7%;
+  resize: none;
+}
+
+#feedCups{
+  resize:none;
+  width: 5vw;
+  text-align: center;
+}
+
+#dayBtn{
+  width: auto;
+  float: left;
+}
+
+.headerThings{
+  vertical-align: middle;
 }

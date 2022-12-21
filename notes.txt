@@ -1,0 +1,137 @@
+TODO
+
+making the hunger a string instead of in int ✔
+changing the image depending on how happy the cat is ✔
+
+Feeding the cat✔
+    add the button
+    adding in the different types of food ✔
+    giving them the option of which food and how much✔
+
+petting the cat
+    add the button
+    figure out how much a cat likes attention
+
+
+increasing the age of the cat ✔
+    increasing the weight of the cat dependent on age✔
+
+creating a day functions ✔
+    increasing the day button✔
+    increases the age of the cat if the cat is 10days old✔
+    calls the function to see if cat was fed proper ammount✔
+    calls the function to see if cat is happy ✔
+    ect
+
+
+
+
+
+
+Moods✔
+    Mood is a scale from 0 - 100
+        loving >80 !
+        happy >60 !
+        neutral 50-60 !
+        sad <50 ! 
+        depressed <35 !
+        KILL <=15 !
+
+
+Weight of kitten✔
+    The ammount of food you need to give a kitten is dependent of the weight of the kitten
+        baby kitten
+            2.5 LBS - 160cal
+            5 LBS - 360Cal
+        adult kitten
+            5 LBS - 360cal
+            10 LBS - 540cal
+            15 LBS - 740cal
+
+Hunger / Food✔
+        150 - exploded - Dies
+        125 - way to full - a lot of happiness every x time interval
+        110 - too full - happiness every x time interval
+        100 - full + happiness every x time interval
+        75  - content
+        50  - hungry - happiness every x time interval
+        25  - starving - a lot of happiness every x time interval
+        0 - starves to death - Dies
+    Food is a set ammount of filling deppending on type and ammount of food
+       types of food & ammounts
+            Dry Kibble
+                1/8 cup 30  calories
+                1/4 cup 60  calories
+                1/2 cup 120 calories
+                 1  cup 240 calories
+            Wet Food
+                1/8 can 45  calories
+                1/4 can 90  calories
+                1/2 can 180 calories
+                 1  can 360 calories
+
+MATH for feeding  ✔
+    if a baby kitten that weighs 2.5 LBS and needs 160 calories (has a 20calorie saftey net over and under)
+    you feed him 1/2 cup of dry kibble that would make him full or hunger would = 100
+    over 150 calories makes them dead
+    over 100 calories makes them way to full 
+    over 20 calories makes their stomach hurt
+    under 20 calories makes them content
+    under 50 makes them hungry
+    under 90 makes them starving
+    under 125 makes them dead
+
+    so with that all in mind 
+
+    overfeeding works like this
+
+    current calories = 0
+    fed 200
+        Next day
+
+    cats stomach hurts
+    current calories = 40
+    feed 120
+
+✔
+let afterDayCalories = 0
+
+function checkCalories(){
+
+  afterDayCalories += currentCalories - neededCalories
+
+  switch(afterDayCalories){
+      case(afterDayCalories <= 20 && afterDayCalories >= -20):         afterDayCalories -/+ 20 = +5happiness
+          cat.happiness += 5
+          break
+      case(afterDayCalories > 20 && afterDayCalories < 50):            afterDayCalories + 20 < 50 = -5happiness
+          cat.happiness -= 5
+          break
+      case(afterDayCalories >= 50 && afterDayCalories < 100):          afterDayCalories + 50 < 100 = -10happiness
+          cat.happiness -= 10
+          break
+      case(afterDayCalories >= 100 && afterDayCalories < 150):         afterDayCalories + 100 < 150 = -15happiness
+          cat.happiness -= 15
+          break
+      case(afterDayCalories < -20 && afterDayCalories > -50):          afterDayCalories - 20 > -50 = -5happiness
+          cat.happiness -= 5
+          break
+      case(afterDayCalories <= -50 && afterDayCalories > -100):        afterDayCalories -50 > -100 = -10happiness
+          cat.happiness -= 10
+          break
+      case(afterDayCalories <= 100 && afterDayCalories > -150):        afterDayCalories -100 > -150 = -15happiness
+          cat.happiness -= 15
+          break
+      case(afterDayCalories > 150 || afterDayCalories < -150):         afterDayCalories - 150 or + 150 is a dead kitty
+          cat.alive = false
+          break
+  }
+} 
+
+
+
+
+            
+
+
+
