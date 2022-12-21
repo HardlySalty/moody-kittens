@@ -282,54 +282,53 @@ function drawKittens() {
     if(kitten.alive == true){
       template += `
     <div class="unselectable">
-      <table class="kitten" style="padding-bottom:2vw; padding-left: 2vw; padding-top:1vw">
+      <table class="kitten" style="padding-bottom:2vw; padding-left: 5vw; padding-right:4vw; padding-top:1.5vw">
         <span>
-          <i width="5vw" height="5vw" class="kitten"></i>
+          <i width="10vw" height="8vw" class="kitten"></i>
           <tr align="center" >
             <th colspan="5"><img src="${kitten.moodPic}"></th>
           </tr>
-          <tr align="center" >
-            <th width="8vw">Name</th>
-            <th width="5vw">Age</th>
-            <th width="8vw">Weight</th>
-            <th width="7vw">Mood</th>
+          <tr align="center">
+            <th width="12vw">Name</th>
+            <th width="12vw">Age</th>
+            <th width="12vw">Weight</th>
+            <th width="12vw">Mood</th>
           </tr>
           <tr align="center">
-            <td width="8vw">${kitten.name}</td>
-            <td width="5vw">${kitten.age}</td>
-            <td width="8vw">${kitten.weight}lbs</td>
-            <td width="7vw">${kitten.moodStr}</td>
+            <td width="12vw">${kitten.name}</td>
+            <td width="12vw">${kitten.age}</td>
+            <td width="12vw">${kitten.weight}lbs</td>
+            <td width="12vw">${kitten.moodStr}</td>
           </tr
           <tr>
-          <td width="365" colspan="4" style="padding-left: 7vw;"><button onclick="feedCat(${kitten.id})">Feed</button><i> </i><button
-                                                               onclick="petCat(${kitten.id})" style="width: 3vw">Pet</button></td>
+          <td width="50vw" colspan="4" style="padding-left: 3.4vw; font-size: .4vw"><button onclick="feedCat(${kitten.id})">Feed</button><i> </i><button onclick="petCat(${kitten.id})" style="width: 3vw">Pet</button></td>
           </tr>
         </span>
       </table>
     <div>`
     }else{
       template += `
-    <div class="unselectable">
-      <table class="kitten" style="padding-bottom:2vw; padding-left: 2vw; padding-top: 1vw">
+      <div class="unselectable">
+      <table class="kitten" style="padding-bottom:2vw; padding-left: 2vw; padding-top:1vw">
         <span>
-        <i width="100" height="100" class="kitten"></i>
+          <i width="10vw" height="10vw" class="kitten"></i>
           <tr align="center" >
             <th colspan="5"><img src="${kitten.moodPic}"></th>
           </tr>
-          <tr align="center" >
-          <th width="80"></th>
-          <th width="80">Name</th>
-          <th width="50">Age</th>
-          <th width="70">Mood</th>
+          <tr align="center">
+            <td width="12vw"></td>
+            <th width="12vw">Name</th>
+            <th width="12vw">Age</th>
+            <td width="12vw"></td>
           </tr>
           <tr align="center">
-            <td width="80"></td>
-            <td width="80">${kitten.name}</td>
-            <td width="50">${kitten.age}</td>
-            <td width="70">Peacful</td>
-          </tr>
+            <td width="12vw"></td>
+            <td width="12vw">${kitten.name}</td>
+            <td width="12vw">${kitten.age}</td>
+            <td width="12vw"></td>
+          </tr
           <tr>
-          <td width="365" colspan="5" style="padding-left: 42%;"><button onclick="buryCat(${kitten.id})">bury</button><i></td>
+          <td width="50vw" colspan="4" style="padding-left: 6.4vw;"><button onclick="buryCat(${kitten.id})">Bury</button></td>
           </tr>
         </span>
       </table>

@@ -135,8 +135,8 @@ button:active{
 .kitten img{
   filter: drop-shadow(2px 4px 6px #1b1b1b);
   transition: all .35s ease;
-  width: 11vw;
-  height: 8vw;
+  width: 15vw;
+  height: 10vw;
   position: relative;
   padding: .2vw;
 }
