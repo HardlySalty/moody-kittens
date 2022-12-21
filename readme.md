@@ -1,3 +1,9 @@
+Some tips 
+1): Don't pet the cat too much
+2): Dont make the cat angry
+3): you can over and under feed your cat
+
+______________________________
 <div class="text-center">
 	<img src="https://codeworks.blob.core.windows.net/public/assets/img/projects/moody-logo.png" alt="moody kittens" height="250">
 </div>
