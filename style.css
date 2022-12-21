@@ -20,7 +20,7 @@
 
 body{
   background-color: var(--bg);
-  font-size: 16pt;
+  font-size: 1.4vw;
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ body{
 }
 
 header{
-  height: 4em;
+  height: 5vw;
 }
 main{
   min-height: calc(100vh - (120px + 80px));
@@ -47,13 +47,13 @@ form{
 
 label{
   display: block;
-  font-size: 12pt;
+  font-size: 5vw;
 }
 
 input{
   width: 100%;
   padding: .375rem .75rem;
-  font-size: 1rem;
+  font-size: 1vw;
   color: var(--light);
   background-color: transparent;
   background-clip: padding-box;
@@ -75,7 +75,7 @@ button{
   text-transform: uppercase;
   transition: all .2s ease;
   cursor: pointer;
-  padding: 1em;
+  padding: .7vw;
 }
 button:focus{
   outline: none;
@@ -88,7 +88,7 @@ button.btn-special{
   background: transparent;
   word-wrap: normal;
   border: none;
-  width: 7em;
+  width: 5vw;
   box-shadow: none;
   position: relative;
   display: flex;
@@ -98,8 +98,8 @@ button.btn-special{
 }
 button.btn-special:after{
   content: "ADD";
-  margin-top: 0.3em;
-  font-size: 8pt;
+  margin-top: .1vw;
+  font-size: .8vw;
   color: var(--primary);
 }
 button.btn-special:focus{
@@ -138,7 +138,7 @@ button:active{
   width: 11vw;
   height: 8vw;
   position: relative;
-  padding: 15x;
+  padding: .2vw;
 }
 .kitten.happy img{
   filter: drop-shadow(2px 4px 6px #00ffb3);
@@ -285,7 +285,7 @@ button:active{
 }
 
 .table{
-  padding: 50px;
+  padding: 5vw;
 }
 
 .radioBtn{
